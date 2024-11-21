@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 24px;
+  padding: 24px 24px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  width: calc((100% - 72px) / 4);
+  border: 1px solid #000;
+  transition: transform 0.3s;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}

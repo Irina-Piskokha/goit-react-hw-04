@@ -1,18 +1,14 @@
 import s from "./ImageCard.module.css";
 
-const ImageCard = ({ images }) => {
+const ImageCard = ({ image, isModalOpen }) => {
   return (
-    //   { images.length > 0 && (
-    <ul className={s.wrapper}>
-      {images.map(({ id, urls, alt_description }) => (
-        <li key={id} className={s.item}>
-          <a href={urls.regular} className={s.link}>
-            <img src={urls.regular} alt={alt_description} className={s.img} />
-          </a>
-        </li>
-      ))}
-    </ul>
-    // )}
+    <div onClick={() => isModalOpen(image.urls.regular, image.alt_description)}>
+      <img
+        src={image.urls.small}
+        alt={image.alt_description}
+        className={s.img}
+      />
+    </div>
   );
 };
 
