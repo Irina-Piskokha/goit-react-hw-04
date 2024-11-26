@@ -21,6 +21,7 @@ function App() {
 
   useEffect(() => {
     if (query === null) return;
+    console.log(query);
     const getData = async () => {
       try {
         setIsLoading(true);
